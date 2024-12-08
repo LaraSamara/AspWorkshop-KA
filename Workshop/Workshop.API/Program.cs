@@ -1,8 +1,10 @@
 
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Workshop.Core.Interfaces;
 using Workshop.Core.Models;
 using Workshop.Infrastructure.Data;
+using Workshop.Infrastructure.Repositories;
 
 namespace Workshop.API
 {
@@ -35,6 +37,7 @@ namespace Workshop.API
                     options.Password.RequireNonAlphanumeric = true;
                 }).AddEntityFrameworkStores<AppDbContext>();
 
+            builder.Services.AddScoped<IAuthRepository, AuthRepository>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
