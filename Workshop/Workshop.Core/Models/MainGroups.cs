@@ -10,6 +10,7 @@ namespace Workshop.Core.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
         public ICollection<Items> Items { get; set; }
         public ICollection<SubGroupsA> SubGroupsA { get; set; } = new HashSet<SubGroupsA>();
         public ICollection<SubGroupsB> SubGroupsB { get; set; } = new HashSet<SubGroupsB>();

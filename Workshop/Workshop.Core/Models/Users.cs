@@ -16,8 +16,16 @@ namespace Workshop.Core.Models
         public int Cities_Id { get; set; }
         [ForeignKey(nameof(Zones))]
         public int Zones_Id { get; set; }
+        [ForeignKey(nameof(Classifications))]
+        public int Classifications_Id { get; set; }
         public Goverments Goverments { get; set; }
         public Cities Cities { get; set; }
         public Zones Zones { get; set; }
+        public Classifications Classifications { get; set; }
+        public ICollection<CustomersStores> CustomersStores = new HashSet<CustomersStores>();
+        public ICollection<Invoices> invoices { get; set; } = new HashSet<Invoices>();
+        public ICollection<ShoppingCartItems> ShoppingCartItems { get; set; } = new HashSet<ShoppingCartItems>();
+
+
     }
 }

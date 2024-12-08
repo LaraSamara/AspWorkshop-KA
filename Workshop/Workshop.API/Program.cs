@@ -1,4 +1,9 @@
 
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Workshop.Core.Models;
+using Workshop.Infrastructure.Data;
+
 namespace Workshop.API
 {
     public class Program
@@ -13,6 +18,22 @@ namespace Workshop.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddDbContext<AppDbContext>(
+            options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnections"));
+            });
+
+            builder.Services.AddIdentity<Users, IdentityRole<int>>(
+                options =>
+                {
+                    options.Password.RequiredUniqueChars = 1;
+                    options.Password.RequireDigit = true;
+                    options.Password.RequireLowercase = true;
+                    options.Password.RequireUppercase = true;
+                    options.Password.RequireNonAlphanumeric = true;
+                }).AddEntityFrameworkStores<AppDbContext>();
 
             var app = builder.Build();
 
