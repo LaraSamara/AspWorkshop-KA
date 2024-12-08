@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Inxib6OlAC2H1TEDdwJQ1UTO963HHQMWUtXDWEOfPpSKdM7BxdSvdO4TMe23u1nYOckruaLqfKK12Sg+9hwI1A==",
+  "dgSpecHash": "bEtB8oiNP5Qx3yRIOsbtKnkAS8714w2umlwOD3ziY9FrZ2vv2SnwWzT2zWPIpUDA6hw0VYiL62ML4DIIkk7JYw==",
   "success": true,
   "projectFilePath": "C:\\Users\\BisanCo\\Desktop\\WorkShop\\Workshop\\Workshop.Infrastructure\\Workshop.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BisanCo\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\BisanCo\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\BisanCo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\BisanCo\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
+    "C:\\Users\\BisanCo\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512",
     "C:\\Users\\BisanCo\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\BisanCo\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\BisanCo\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",

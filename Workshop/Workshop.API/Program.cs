@@ -1,6 +1,8 @@
 
+using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Workshop.Core.Interfaces;
 using Workshop.Core.Models;
 using Workshop.Infrastructure.Data;
@@ -38,6 +40,13 @@ namespace Workshop.API
                 }).AddEntityFrameworkStores<AppDbContext>();
 
             builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+            builder.Services.AddScoped<IItemsRepository, ItemsRepository>();
+            builder.Services.AddScoped<ICartRepository, CartRepository>();
+
+
+            var Config = TypeAdapterConfig.GlobalSettings;
+            builder.Services.AddSingleton(Config);
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
