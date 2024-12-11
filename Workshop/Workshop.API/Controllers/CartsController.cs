@@ -44,7 +44,7 @@ namespace Workshop.API.Controllers
                 }
             }catch (Exception ex)
             {
-                return Unauthorized("Invalid Token" + ex.Message);
+                return Unauthorized("Invalid Token " + ex.Message);
             }
         }
     }

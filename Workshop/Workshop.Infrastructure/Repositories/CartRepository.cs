@@ -36,13 +36,14 @@ namespace Workshop.Infrastructure.Repositories
                     Store_Id = Dto.Store_id,
                     Item_Id = Dto.ItemId,
                     Quantity = Dto.Quantity,
+                    Units_Id = Dto.UnitId,
                     UpdateeAt = DateTime.Now,
                 };
                 await context.ShoppingCartItems.AddAsync(ShoppingCart);
             }
             else
             {
-                Cart.Quantity += Dto.Quantity;
+                Cart.Quantity = Dto.Quantity;
                 Cart.UpdateeAt = DateTime.Now;
                 Cart.Units_Id = Dto.UnitId;
                 Cart.Store_Id = Dto.Store_id;
